@@ -1,0 +1,8 @@
+/libs/
+/target/
+/obj/
+/bin/
+/gen/
+.classpath
+.project
+.settings/
