@@ -1,3 +1,4 @@
 [submodule "jni/libxmp"]
 	path = jni/libxmp
 	url = https://github.com/cmatsuoka/libxmp.git
+	ignore = dirty

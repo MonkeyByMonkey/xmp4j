@@ -12,9 +12,9 @@ complete list of authors.
 
 ## Building
 
-Build system only supports Android at this point.
-
-`mvn clean package` builds an apklib with native libraries and a jar with Java classes.
+`mvn clean package`. Requires `$ANDROID_NDK_HOME`, `$JDK_WIN` and `$JDK_MAC`
+(Mac only) to be set. The `$JDK_*` variables should point to respective 
+JDK location, e.g. `$JAVA_HOME`.
 
 ## Usage (Android)
 

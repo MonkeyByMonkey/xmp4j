@@ -1,0 +1,84 @@
+diff --git a/src/load.c b/src/load.c
+index 01e9b92..37d07ba 100644
+--- a/src/load.c
++++ b/src/load.c
+@@ -17,8 +17,12 @@
+ #ifdef __native_client__
+ #include <sys/syslimits.h>
+ #else
++#ifdef __linux__
++#include <linux/limits.h>
++#else
+ #include <limits.h>
+ #endif
++#endif
+ 
+ #if !defined(HAVE_POPEN) && defined(WIN32)
+ #include "../win32/ptpopen.h"
+diff --git a/src/loaders/med2_load.c b/src/loaders/med2_load.c
+index 999cfb2..936c12a 100644
+--- a/src/loaders/med2_load.c
++++ b/src/loaders/med2_load.c
+@@ -13,8 +13,12 @@
+ #ifdef __native_client__
+ #include <sys/syslimits.h>
+ #else
++#ifdef __linux__
++#include <linux/limits.h>
++#else
+ #include <limits.h>
+ #endif
++#endif
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include "period.h"
+diff --git a/src/loaders/mfp_load.c b/src/loaders/mfp_load.c
+index 5040293..b2d7c43 100644
+--- a/src/loaders/mfp_load.c
++++ b/src/loaders/mfp_load.c
+@@ -18,8 +18,12 @@
+ #ifdef __native_client__
+ #include <sys/syslimits.h>
+ #else
++#ifdef __linux__
++#include <linux/limits.h>
++#else
+ #include <limits.h>
+ #endif
++#endif
+ #include <unistd.h>
+ 
+ static int mfp_test(HIO_HANDLE *, char *, const int);
+diff --git a/src/loaders/mod_load.c b/src/loaders/mod_load.c
+index cc005a5..9510f68 100644
+--- a/src/loaders/mod_load.c
++++ b/src/loaders/mod_load.c
+@@ -26,7 +26,11 @@
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <unistd.h>
++#ifdef __linux__
++#include <linux/limits.h>
++#else
+ #include <limits.h>
++#endif
+ #include "loader.h"
+ #include "mod.h"
+ 
+diff --git a/src/loaders/pw_load.c b/src/loaders/pw_load.c
+index c5e1734..6144a75 100644
+--- a/src/loaders/pw_load.c
++++ b/src/loaders/pw_load.c
+@@ -10,8 +10,12 @@
+ #ifdef __native_client__
+ #include <sys/syslimits.h>
+ #else
++#ifdef __linux__
++#include <linux/limits.h>
++#else
+ #include <limits.h>
+ #endif
++#endif
+ #include "loader.h"
+ #include "mod.h"
+ #include "period.h"

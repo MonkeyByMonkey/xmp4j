@@ -7,6 +7,7 @@ import java.io.InputStream;
 import pm.monkey.xmp4j.exceptions.DepackException;
 import pm.monkey.xmp4j.exceptions.LoadException;
 import pm.monkey.xmp4j.exceptions.UnsupportedFormatException;
+import pm.monkey.xmp4j.utils.LibraryLoader;
 
 public class PlaybackEngine {
 
@@ -138,7 +139,7 @@ public class PlaybackEngine {
     }
 
     static {
-        System.loadLibrary("xmp4j");
+        LibraryLoader.loadLibrary("xmp4j");
     }
 
     protected PlaybackEngine() {
