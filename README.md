@@ -2,8 +2,6 @@
 
 # xmp4j
 
-*BEWARE! WORK IN PROGRESS! MAY EAT YOUR DOG AND CHEW ON YOUR HOMEWORK!*
-
 Java wrapper for libxmp, largely based on http://sourceforge.net/p/xmp/xmp-android by 
 Claudio Matsuoka et. al.
 
