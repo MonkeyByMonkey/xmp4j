@@ -1,4 +1,4 @@
-[![Build Status](https://monkeybymonkey.ci.cloudbees.com/buildStatus/icon?job=xmp4j)](https://monkeybymonkey.ci.cloudbees.com/job/xmp4j/)
+[![Build Status](https://ci.protomou.se:443/buildStatus/icon?job=xmp4j)](https://ci.protomou.se:443/job/xmp4j/)
 
 # xmp4j
 
